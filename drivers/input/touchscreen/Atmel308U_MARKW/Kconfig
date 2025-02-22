@@ -1,0 +1,4 @@
+config TOUCHSCREEN_ATMEL308U_MARKW
+	tristate "ATMEL A308U touchpanel driver"
+	depends on INPUT_TOUCHSCREEN
+	default n
