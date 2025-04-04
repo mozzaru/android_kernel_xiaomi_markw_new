@@ -48,6 +48,10 @@
 	status = "disabled";
 };
 
+&thermal_zones {
+	/delete-node/ pa-therm1-adc;
+};
+
 &pmi_haptic {
 	status = "okay";
 	qcom,vmax-mv = <2700>;
@@ -474,26 +478,7 @@
 };
 
 &thermal_zones {
-	chg-temp-adc {
-		status = "disabled";
-	};
-
-	case-therm-step {
-		trips {
-			modem_trip0: modem-trip0 {
-				temperature = <70000>;
-			};
-			modem_trip1: modem-trip1 {
-				temperature = <72000>;
-			};
-			modem_trip2: modem-trip2 {
-				temperature = <75000>;
-				type = "critical";
-			};
-		};
-	};
-
-        xo-therm-adc {
+	xo-therm-adc {
 		polling-delay = <1000>;
 	};
 };
